@@ -72,14 +72,17 @@ const Navbar = () => {
             <Link href="/#services">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">Services</li>
             </Link>
-            <Link href="/#skills">
-              <li className="ml-10 py-1 text-sm uppercase hover:border-b">Skills</li>
+            <Link href="/#stack">
+              <li className="ml-10 py-1 text-sm uppercase hover:border-b">Stack</li>
             </Link>
-            <Link href="/#projects">
+            <Link href="/#faq">
+              <li className="ml-10 py-1 text-sm uppercase hover:border-b">FAQ</li>
+            </Link>
+            {/* <Link href="/#projects">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Projects
               </li>
-            </Link>
+            </Link> */}
             {/* <Link href="/#contact"> */}
             {/* <li className="ml-10 text-sm uppercase hover:border-b"> */}
             <li>
@@ -129,7 +132,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let's build something legendary together
+                Let&apos;s build something legendary together
               </p>
             </div>
           </div>
@@ -145,16 +148,21 @@ const Navbar = () => {
                   Services
                 </li>
               </Link>
-              <Link href="/#skills">
+              <Link href="/#stack">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
-                  Skills
+                  Stack
                 </li>
               </Link>
-              <Link href="/#projects">
+              <Link href="/#faq">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  FAQ
+                </li>
+              </Link>
+              {/* <Link href="/#projects">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Projects
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Contact
@@ -162,8 +170,8 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="pt-10">
-              <p className="uppercase tracking-widest text-[#5651e5]">
-                Let's Connect
+              <p className="uppercase tracking-widest text-[#565120e5]">
+                Let&apos;s Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">

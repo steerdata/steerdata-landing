@@ -12,11 +12,10 @@ declare global {
 
 const Contact = () => {
   useEffect(() => {
-
-
     const calendlyScript = document.createElement("script");
     calendlyScript.type = "text/javascript";
-    calendlyScript.src = "https://assets.calendly.com/assets/external/widget.js";
+    calendlyScript.src =
+      "https://assets.calendly.com/assets/external/widget.js";
     calendlyScript.async = true;
     document.body.appendChild(calendlyScript);
 
@@ -35,12 +34,15 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
-            <div className="p-4" style={{ minWidth: "320px", minHeight: "700px" }}>
-              <HubspotContactForm 
-                  region="eu1"
-                  portalId="139804690"
-                  formId='fabc9a22-3788-4aba-a965-280f67adb981'
-                  />
+            <div
+              className="p-4"
+              style={{ minWidth: "320px", minHeight: "700px" }}
+            >
+              <HubspotContactForm
+                region="eu1"
+                portalId="139804690"
+                formId="fabc9a22-3788-4aba-a965-280f67adb981"
+              />
             </div>
           </div>
           {/* right */}
@@ -61,7 +63,7 @@ const Contact = () => {
       <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
       <footer className="flex justify-center py-10">
         <p className="text-gray-600">
-          &copy; {new Date().getFullYear()} Steerdata LLC. All rights reserved.
+          &copy; {new Date().getFullYear()} SteerData LLC. All rights reserved.
         </p>
       </footer>
     </div>

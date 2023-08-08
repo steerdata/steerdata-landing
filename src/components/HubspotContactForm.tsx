@@ -19,7 +19,7 @@ const HubspotContactForm = (props: { region: any; portalId: any; formId: any; })
                 })
             }
         });
-    }, []);
+    }, [formId, portalId, region]);
 
     return (
         <div>

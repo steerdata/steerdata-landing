@@ -2,8 +2,9 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Main from '@/components/Main'
 import Services from '@/components/Services'
-import Skills from '@/components/Skills'
+import Stack from '@/components/Stack'
 import Projects from '@/components/Projects'
+import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,8 +15,9 @@ export default function Home() {
       <Navbar />
       <Main />
       <Services />
-      <Skills />
+      <Stack />
       {/* <Projects /> */}
+      <FAQ />
       <Contact />
     </div>
   )
