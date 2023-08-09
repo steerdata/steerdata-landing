@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+// import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+// import { BsFillPersonLinesFill } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 
 const navColor = "#ecf0f3";
@@ -56,36 +56,36 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
-        <Link href="/">
+        <a href="/">
           <Image
             src={require("../../public/assets/navbarLogo.png")}
             alt="/"
             width="250"
             height="250"
           />
-        </Link>
+        </a>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <Link href="/">
+            <a href="/">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Home
               </li>
-            </Link>
-            <Link href="#services">
+            </a>
+            <a href="#services">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Services
               </li>
-            </Link>
-            <Link href="#stack">
+            </a>
+            <a href="#stack">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Stack
               </li>
-            </Link>
-            <Link href="#faq">
+            </a>
+            <a href="#faq">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 FAQ
               </li>
-            </Link>
+            </a>
             {/* <Link href="#projects">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Projects
@@ -147,21 +147,21 @@ const Navbar = () => {
                   Home
                 </li>
               </Link>
-              <Link href="#services">
+              <a href="#services">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Services
                 </li>
-              </Link>
-              <Link href="#stack">
+              </a>
+              <a href="#stack">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Stack
                 </li>
-              </Link>
-              <Link href="#faq">
+              </a>
+              <a href="#faq">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   FAQ
                 </li>
-              </Link>
+              </a>
               {/* <Link href="#projects">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Projects

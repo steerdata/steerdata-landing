@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Typed from "react-typed";
-import Link from 'next/link';
+// import Link from 'next/link';
 import * as icons from "react-icons/hi";
 
 const Main = () => {
@@ -62,7 +62,7 @@ const Main = () => {
             </button>
           </div>
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hover:animate-pulse hover:scale-110 transition duration-300 ease-in-out">
-            <Link href="#services">
+            <a href="#services">
               <div
                 className={`rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer ${
                   showLink ? 'opacity-100' : 'opacity-0'
@@ -77,7 +77,7 @@ const Main = () => {
                   size={30}
                 />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
