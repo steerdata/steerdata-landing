@@ -67,26 +67,34 @@ const Navbar = () => {
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             <Link href="/">
-              <li className="ml-10 py-1 text-sm uppercase hover:border-b">Home</li>
+              <li className="ml-10 py-1 text-sm uppercase hover:border-b">
+                Home
+              </li>
             </Link>
-            <Link href="/#services">
-              <li className="ml-10 py-1 text-sm uppercase hover:border-b">Services</li>
+            <Link href="#services">
+              <li className="ml-10 py-1 text-sm uppercase hover:border-b">
+                Services
+              </li>
             </Link>
-            <Link href="/#stack">
-              <li className="ml-10 py-1 text-sm uppercase hover:border-b">Stack</li>
+            <Link href="#stack">
+              <li className="ml-10 py-1 text-sm uppercase hover:border-b">
+                Stack
+              </li>
             </Link>
-            <Link href="/#faq">
-              <li className="ml-10 py-1 text-sm uppercase hover:border-b">FAQ</li>
+            <Link href="#faq">
+              <li className="ml-10 py-1 text-sm uppercase hover:border-b">
+                FAQ
+              </li>
             </Link>
-            {/* <Link href="/#projects">
+            {/* <Link href="#projects">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Projects
               </li>
             </Link> */}
-            {/* <Link href="/#contact"> */}
+            {/* <Link href="#contact"> */}
             {/* <li className="ml-10 text-sm uppercase hover:border-b"> */}
             <li>
-            <button
+              <button
                 className="hover:animate-pulse ml-7 py-1 px-3 text-white rounded-lg text-sm uppercase hover:border-b shadow-lg"
                 onClick={() => (window.location.href = "#contact")}
               >
@@ -130,11 +138,7 @@ const Navbar = () => {
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">
-                Let&apos;s build something legendary together
-              </p>
-            </div>
+            <div className="border-b border-gray-300 my-4"></div>
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
@@ -143,33 +147,33 @@ const Navbar = () => {
                   Home
                 </li>
               </Link>
-              <Link href="/#services">
+              <Link href="#services">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Services
                 </li>
               </Link>
-              <Link href="/#stack">
+              <Link href="#stack">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Stack
                 </li>
               </Link>
-              <Link href="/#faq">
+              <Link href="#faq">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   FAQ
                 </li>
               </Link>
-              {/* <Link href="/#projects">
+              {/* <Link href="#projects">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Projects
                 </li>
               </Link> */}
-              <Link href="/#contact">
+              <Link href="#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Contact
                 </li>
               </Link>
             </ul>
-            <div className="pt-10">
+            {/* <div className="pt-10">
               <p className="uppercase tracking-widest text-[#565120e5]">
                 Let&apos;s Connect
               </p>
@@ -187,7 +191,7 @@ const Navbar = () => {
                   <BsFillPersonLinesFill />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
