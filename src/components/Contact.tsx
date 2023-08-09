@@ -25,9 +25,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <div id="contact" className="w-full">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
-        <h2 className="col-span-3 text-xl py-4 tracking-widest uppercase text-[#5651e5]">
+    <div id="contact" className="w-full p-2 py-8 lg:py-16">
+      <div className="px-2 max-w-[1240px] mx-auto">
+        <h2 className="col-span-3 uppercase text-xl tracking-widest text-[#5651e5]">
           Contact
         </h2>
 
