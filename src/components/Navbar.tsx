@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
-// import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-// import { BsFillPersonLinesFill } from "react-icons/bs";
+import { useState, useEffect } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 
 const navColor = "#ecf0f3";
@@ -56,7 +54,7 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
-        <a href="/">
+        <a href="#home">
           <Image
             src={require("../../public/assets/navbarLogo.png")}
             alt="/"
@@ -66,7 +64,7 @@ const Navbar = () => {
         </a>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <a href="/">
+            <a href="#home">
               <li className="ml-10 py-1 text-sm uppercase hover:border-b">
                 Home
               </li>
@@ -123,7 +121,7 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Link href="/">
+              <Link href="#home">
                 <Image
                   src={require("../../public/assets/navbarLogo.png")}
                   width="150"
@@ -142,7 +140,7 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
+              <Link href="#home">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
                 </li>

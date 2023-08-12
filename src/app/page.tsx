@@ -3,7 +3,6 @@ import Navbar from '@/components/Navbar'
 import Main from '@/components/Main'
 import Services from '@/components/Services'
 import Stack from '@/components/Stack'
-import Projects from '@/components/Projects'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 

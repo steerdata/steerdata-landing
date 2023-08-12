@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import * as icons from "react-icons/hi";
+import { HiMinus, HiPlus } from "react-icons/hi";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -63,7 +63,7 @@ const FAQ = () => {
               <div className="flex justify-between items-center cursor-pointer">
                 <h4 className="font-bold">{item.question}</h4>
                 <span className="toggle-icon px-4">
-                  {activeIndex === index ? <icons.HiMinus /> : <icons.HiPlus />}
+                  {activeIndex === index ? <HiMinus /> : <HiPlus />}
                 </span>
               </div>
               {activeIndex === index && (
