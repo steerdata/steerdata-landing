@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Typed from "react-typed";
-// import Link from 'next/link';
-import * as icons from "react-icons/hi";
+import { HiChevronDown } from "react-icons/hi";
 
 const Main = () => {
   const [showLink, setShowLink] = useState(false);
@@ -72,7 +71,7 @@ const Main = () => {
                   transitionDelay: showLink ? '0s' : '1s',
                 }}
               >
-                <icons.HiChevronDown
+                <HiChevronDown
                   className="text-[#5651e5]"
                   size={30}
                 />

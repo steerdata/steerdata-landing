@@ -1,11 +1,33 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import AwsLogo from "../../public/assets/skills/aws.png";
+import GcpLogo from "../../public/assets/skills/gcp.png";
+import AzureLogo from "../../public/assets/skills/azure.png";
+import ApachesupersetLogo from "../../public/assets/skills/apachesuperset.png";
+import LookerLogo from "../../public/assets/skills/looker.png";
+import DomoLogo from "../../public/assets/skills/domo.png";
+import PowerbiLogo from "../../public/assets/skills/powerbi.png";
+import AirflowLogo from "../../public/assets/skills/airflow.png";
+import DatabricksLogo from "../../public/assets/skills/databricks.png";
+import AdfLogo from "../../public/assets/skills/adf.png";
+import DeltalakeLogo from "../../public/assets/skills/deltalake.png";
+import SnowflakeLogo from "../../public/assets/skills/snowflake.png";
+import AzuresynapseLogo from "../../public/assets/skills/azuresynapse.png";
+import MongoLogo from "../../public/assets/skills/mongo.png";
+import SnowplowLogo from "../../public/assets/skills/snowplow.png";
+import SparkLogo from "../../public/assets/skills/spark.png";
+import PytorchLogo from "../../public/assets/skills/pytorch.png";
+import TensorflowLogo from "../../public/assets/skills/tensorflow.png";
+import AmazonsagemakerLogo from "../../public/assets/skills/amazonsagemaker.png";
+import MlflowLogo from "../../public/assets/skills/mlflow.png";
+import AzuremlLogo from "../../public/assets/skills/azureml.png";
+import VertexaiLogo from "../../public/assets/skills/vertexai.png";
 
 interface Logo {
   name: string;
   description: string;
-  default: any;
+  image: any;
 }
 
 interface Category {
@@ -25,19 +47,19 @@ const Stack = () => {
           name: "AWS",
           description:
             "Amazon Web Services (AWS) is a secure cloud services platform, offering computing power, database storage, and other functionalities.",
-          default: require("../../public/assets/skills/aws.png"),
+          image: AwsLogo,
         },
         {
           name: "GCP",
           description:
             "Google Cloud Platform (GCP) provides a suite of cloud computing services that runs on the same infrastructure that Google uses internally.",
-          default: require("../../public/assets/skills/gcp.png"),
+          image: GcpLogo,
         },
         {
           name: "Azure",
           description:
             "Microsoft Azure is a comprehensive cloud computing service for building, testing, deploying, and managing applications and services.",
-          default: require("../../public/assets/skills/azure.png"),
+          image: AzureLogo,
         },
       ],
     },
@@ -50,25 +72,25 @@ const Stack = () => {
           name: "Superset",
           description:
             "Apache Superset is a modern, open-source data exploration and visualization platform.",
-          default: require("../../public/assets/skills/apachesuperset.png"),
+          image: ApachesupersetLogo,
         },
         {
           name: "Looker",
           description:
             "Looker is a business intelligence and data visualization tool that helps companies make better business decisions.",
-          default: require("../../public/assets/skills/looker.png"),
+          image: LookerLogo,
         },
         {
           name: "Domo",
           description:
             "Domo is a cloud-based business intelligence and data visualization platform that empowers organizations to make informed decisions.",
-          default: require("../../public/assets/skills/domo.png"),
+          image: DomoLogo,
         },
         {
           name: "PowerBI",
           description:
             "Microsoft Power BI is a business analytics service that provides interactive visualizations and business intelligence capabilities.",
-          default: require("../../public/assets/skills/powerbi.png"),
+          image: PowerbiLogo,
         },
       ],
     },
@@ -81,19 +103,19 @@ const Stack = () => {
           name: "Airflow",
           description:
             "Apache Airflow is a platform to programmatically author, schedule, and monitor workflows, enabling complex data processing pipelines.",
-          default: require("../../public/assets/skills/airflow.png"),
+          image: AirflowLogo,
         },
         {
           name: "Databricks",
           description:
             "Databricks offers a unified analytics platform designed to help teams collaborate on big data and machine learning projects.",
-          default: require("../../public/assets/skills/databricks.png"),
+          image: DatabricksLogo,
         },
         {
           name: "Azure Data Factory",
           description:
             "Azure Data Factory is a cloud-based data integration service that enables you to create, schedule, and manage data pipelines.",
-          default: require("../../public/assets/skills/adf.png"),
+          image: AdfLogo,
         },
       ],
     },
@@ -106,19 +128,19 @@ const Stack = () => {
           name: "Delta Lake",
           description:
             "Delta Lake is an open-source storage layer that brings ACID transactions to Apache Spark and big data workloads.",
-          default: require("../../public/assets/skills/deltalake.png"),
+          image: DeltalakeLogo,
         },
         {
           name: "Snowflake",
           description:
             "Snowflake is a cloud-based data warehousing platform designed for the cloud.",
-          default: require("../../public/assets/skills/snowflake.png"),
+          image: SnowflakeLogo,
         },
         {
           name: "Azure Synapse",
           description:
             "Azure Synapse Analytics is an analytics service that brings together big data and data warehousing.",
-          default: require("../../public/assets/skills/azuresynapse.png"),
+          image: AzuresynapseLogo,
         },
       ],
     },
@@ -131,13 +153,13 @@ const Stack = () => {
           name: "MongoDB",
           description:
             "MongoDB is a NoSQL database program used to handle large amounts of data.",
-          default: require("../../public/assets/skills/mongo.png"),
+          image: MongoLogo,
         },
         {
           name: "Snowplow",
           description:
             "Snowplow is an event data collection and processing platform, empowering organizations to collect and process data from various sources.",
-          default: require("../../public/assets/skills/snowplow.png"),
+          image: SnowplowLogo,
         },
       ],
     },
@@ -150,43 +172,43 @@ const Stack = () => {
           name: "Spark",
           description:
             "Apache Spark is an open-source distributed computing system used for big data processing and analytics.",
-          default: require("../../public/assets/skills/spark.png"),
+          image: SparkLogo,
         },
         {
           name: "PyTorch",
           description:
             "PyTorch is an open-source machine learning framework that accelerates the path from research prototyping to production deployment.",
-          default: require("../../public/assets/skills/pytorch.png"),
+          image: PytorchLogo,
         },
         {
           name: "TensorFlow",
           description:
             "TensorFlow is an open-source machine learning framework for dataflow and differentiable programming.",
-          default: require("../../public/assets/skills/tensorflow.png"),
+          image: TensorflowLogo,
         },
         {
           name: "Amazon SageMaker",
           description:
             "Amazon SageMaker is a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning models quickly.",
-          default: require("../../public/assets/skills/amazonsagemaker.png"),
+          image: AmazonsagemakerLogo,
         },
         {
           name: "MLflow",
           description:
             "MLflow is an open-source platform to manage the end-to-end machine learning lifecycle.",
-          default: require("../../public/assets/skills/mlflow.png"),
+          image: MlflowLogo,
         },
         {
           name: "Azure ML",
           description:
             "Azure Machine Learning is a cloud-based platform for developing, training, and deploying machine learning models.",
-          default: require("../../public/assets/skills/azureml.png"),
+          image: AzuremlLogo,
         },
         {
           name: "Vertex AI",
           description:
             "Google Cloud Vertex AI accelerates the deployment and maintenance of machine learning models at scale.",
-          default: require("../../public/assets/skills/vertexai.png"),
+          image: VertexaiLogo,
         },
       ],
     },
@@ -236,9 +258,8 @@ const Stack = () => {
                   <div className="flex flex-col items-center justify-center">
                     <div className="w-[80px] h-[80px] mb-4 relative flex items-center justify-center">
                       <Image
-                        fill
                         style={{ objectFit: "contain" }}
-                        src={logo.default}
+                        src={logo.image}
                         alt={logo.name}
                       />
                     </div>

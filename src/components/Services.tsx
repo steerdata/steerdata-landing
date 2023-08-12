@@ -1,9 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import DataEngImg from '../../public/assets/services/landing-services-data-eng.png';
-import DataArchImg from '../../public/assets/services/landing-services-data-arch.png';
-import DataSciImg from '../../public/assets/services/landing-services-data-sci.png';
+import DataEngImg from '../../public/assets/services/landing-services-data-eng.webp';
+import DataArchImg from '../../public/assets/services/landing-services-data-arch.webp';
+import DataSciImg from '../../public/assets/services/landing-services-data-sci.webp';
 
 const Services = () => {
   return (

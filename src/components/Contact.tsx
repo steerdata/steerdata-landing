@@ -1,6 +1,5 @@
 "use client";
-import Link from "next/link";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import HubspotContactForm from "./HubspotContactForm";
 
@@ -53,7 +52,7 @@ const Contact = () => {
           ></div>
         </div>
         <div className="flex justify-center py-20">
-          <a href="/">
+          <a href="#home">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
             </div>
