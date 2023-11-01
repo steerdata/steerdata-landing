@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { usePathname } from "next/navigation";
@@ -121,14 +120,14 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Link href="#home">
+              <a href="#home">
                 <Image
                   src={require("../../public/assets/navbarLogo.png")}
                   width="150"
                   height="150"
                   alt="/"
                 />
-              </Link>
+              </a>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -140,11 +139,11 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="#home">
+              <a href="#home">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Home
                 </li>
-              </Link>
+              </a>
               <a href="#services">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Services
@@ -165,11 +164,11 @@ const Navbar = () => {
                   Projects
                 </li>
               </Link> */}
-              <Link href="#contact">
+              <a href="#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   Contact
                 </li>
-              </Link>
+              </a>
             </ul>
             {/* <div className="pt-10">
               <p className="uppercase tracking-widest text-[#565120e5]">
