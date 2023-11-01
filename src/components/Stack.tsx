@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import AwsLogo from "../../public/assets/skills/aws.png";
 import GcpLogo from "../../public/assets/skills/gcp.png";
@@ -23,6 +23,24 @@ import AmazonsagemakerLogo from "../../public/assets/skills/amazonsagemaker.png"
 import MlflowLogo from "../../public/assets/skills/mlflow.png";
 import AzuremlLogo from "../../public/assets/skills/azureml.png";
 import VertexaiLogo from "../../public/assets/skills/vertexai.png";
+
+const LoadingLogo = () => (
+  <div className="p-4 shadow-xl rounded-xl animate-pulse">
+    <div className="flex flex-col items-center justify-center">
+      <div className="w-[60px] h-[60px] mb-4 bg-gray-300 rounded-full" />
+      <div className="w-[120px] h-4 bg-gray-300 mb-2 rounded-md" />
+      <div className="w-[80px] h-4 bg-gray-300 mb-2 rounded-md" />
+    </div>
+  </div>
+);
+
+const LoadingDescription = () => (
+  <div className="text-gray-300 text-sm p-2">
+    <div className="w-[80%] h-4 bg-gray-300 rounded-md mb-2" />
+    <div className="w-[60%] h-4 bg-gray-300 rounded-md mb-2" />
+    <div className="w-[70%] h-4 bg-gray-300 rounded-md mb-2" />
+  </div>
+);
 
 interface Logo {
   name: string;
@@ -214,10 +232,19 @@ const Stack = () => {
     },
   ];
 
-  // State to keep track of active category
   const [activeCategory, setActiveCategory] = useState<string>(
     categories[0].name
   );
+  const [loading, setLoading] = useState(false);
+
+  const handleCategoryClick = (categoryName: string) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setActiveCategory(categoryName);
+      setLoading(false);
+    }, 500);
+  };
   return (
     <div id="stack" className="w-full p-2 py-8 lg:py-16">
       <div className="px-2 max-w-[1240px] mx-auto">
@@ -229,7 +256,7 @@ const Stack = () => {
             {categories.map((category) => (
               <div
                 key={category.name}
-                onClick={() => setActiveCategory(category.name)}
+                onClick={() => handleCategoryClick(category.name)}
                 className={`px-4 py-2 rounded-t-md cursor-pointer ${
                   activeCategory === category.name
                     ? "bg-gray-200 text-gray-700"
@@ -242,34 +269,40 @@ const Stack = () => {
           </div>
 
           <div className="mt-4 text-gray-600">
-            {categories.map(
-              (category) =>
-                activeCategory === category.name && (
-                  <p key={category.name}>{category.description}</p>
-                )
+          {loading ? (
+              <LoadingDescription />
+            ) : (
+              categories.map(
+                (category) =>
+                  activeCategory === category.name && (
+                    <p key={category.name}>{category.description}</p>
+                  )
+              )
             )}
           </div>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {categories
-              .find((category) => category.name === activeCategory)
-              ?.logos.map((logo, index) => (
-                <div key={index} className="p-4 shadow-xl rounded-xl">
-                  <div className="flex flex-col items-center justify-center">
-                    <div className="w-[80px] h-[80px] mb-4 relative flex items-center justify-center">
-                      <Image
-                        style={{ objectFit: "contain" }}
-                        src={logo.image}
-                        alt={logo.name}
-                      />
+            {loading
+              ? Array(4)
+                  .fill(null)
+                  .map((_, index) => <LoadingLogo key={index} />)
+              : categories
+                  .find((category) => category.name === activeCategory)
+                  ?.logos.map((logo, index) => (
+                    <div key={index} className="p-4 shadow-xl rounded-xl">
+                      <div className="flex flex-col items-center justify-center">
+                        <div className="w-[60px] h-[60px] mb-4 relative flex items-center justify-center">
+                          <Image
+                            style={{ objectFit: "contain" }}
+                            src={logo.image}
+                            alt={logo.name}
+                          />
+                        </div>
+                        <h3 className="text-lg font-semibold">{logo.name}</h3>
+                        <p className="text-gray-600 text-sm py-2">{logo.description}</p>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-semibold">{logo.name}</h3>
-                    <p className="text-gray-600 text-sm py-2">
-                      {logo.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                  ))}
           </div>
         </div>
       </div>
