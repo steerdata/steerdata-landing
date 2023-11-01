@@ -84,7 +84,7 @@ const Stack = () => {
     {
       name: "Data Visualization",
       description:
-        "We utilize powerful data visualization tools such as Apachesuperset, Looker, Domo, and PowerBI to transform complex data into actionable insights for our clients.",
+        "We utilize powerful data visualization tools such as Apache Superset, Looker, Domo, and PowerBI to transform complex data into actionable insights for our clients.",
       logos: [
         {
           name: "Superset",
