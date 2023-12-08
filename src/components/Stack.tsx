@@ -84,9 +84,9 @@ const Stack = () => {
       ],
     },
     {
-      name: "ETL & Data Lakehouse",
+      name: "Data Engineering",
       description:
-      "Efficiently extract, transform, and load data with Airflow, Databricks, Azure Data Factory, BigQuery, Google Dataproc, Snowflake and Azure Synapse. Explore the power of Data Lakehouse technologies like Delta Lake, BigQuery's BigLake and Dataplex for advanced data storage and processing. Enhance your analytics with Snowplow's capabilities for event data collection and processing.",
+        "We specialize in creating efficient ETL/ELT pipelines using cutting-edge tools such as Airflow, Databricks, Azure Data Factory, BigQuery, Google Dataproc, Snowflake, and Azure Synapse. Our expertise extends to leveraging Data Lakehouse technologies like Dataplex, Delta Lake and BigQuery's BigLake for sophisticated data storage and processing. Moreover, we harness Snowplow's capabilities for expert event data collection and processing.",
       logos: [
         {
           name: "Airflow",
