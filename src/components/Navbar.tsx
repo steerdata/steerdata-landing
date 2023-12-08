@@ -15,10 +15,8 @@ const Navbar = () => {
 
   useEffect(() => {
     if (
-      pathname === "/property" ||
-      pathname === "/crypto" ||
-      pathname === "/netflix" ||
-      pathname === "/twitch"
+      pathname === "/about" ||
+      pathname === "/team"
     ) {
       setNavBg("transparent");
       setlinkColor(navColor);
