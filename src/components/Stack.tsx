@@ -13,8 +13,10 @@ import DatabricksLogo from "../../public/assets/skills/databricks.png";
 import AdfLogo from "../../public/assets/skills/adf.png";
 import DeltalakeLogo from "../../public/assets/skills/deltalake.png";
 import SnowflakeLogo from "../../public/assets/skills/snowflake.png";
+import BigqueryLogo from "../../public/assets/skills/bigquery.png";
+import DataprocLogo from "../../public/assets/skills/dataproc.png";
+import DataplexLogo from "../../public/assets/skills/dataplex.png";
 import AzuresynapseLogo from "../../public/assets/skills/azuresynapse.png";
-import MongoLogo from "../../public/assets/skills/mongo.png";
 import SnowplowLogo from "../../public/assets/skills/snowplow.png";
 import SparkLogo from "../../public/assets/skills/spark.png";
 import PytorchLogo from "../../public/assets/skills/pytorch.png";
@@ -82,40 +84,9 @@ const Stack = () => {
       ],
     },
     {
-      name: "Data Visualization",
+      name: "ETL & Data Lakehouse",
       description:
-        "We utilize powerful data visualization tools such as Apache Superset, Looker, Domo, and PowerBI to transform complex data into actionable insights for our clients.",
-      logos: [
-        {
-          name: "Superset",
-          description:
-            "Apache Superset is a modern, open-source data exploration and visualization platform.",
-          image: ApachesupersetLogo,
-        },
-        {
-          name: "Looker",
-          description:
-            "Looker is a business intelligence and data visualization tool that helps companies make better business decisions.",
-          image: LookerLogo,
-        },
-        {
-          name: "Domo",
-          description:
-            "Domo is a cloud-based business intelligence and data visualization platform that empowers organizations to make informed decisions.",
-          image: DomoLogo,
-        },
-        {
-          name: "PowerBI",
-          description:
-            "Microsoft Power BI is a business analytics service that provides interactive visualizations and business intelligence capabilities.",
-          image: PowerbiLogo,
-        },
-      ],
-    },
-    {
-      name: "ETL",
-      description:
-        "Our ETL solutions are powered by leading tools like Airflow, Databricks, and Azure Data Factory, enabling us to design, automate, and optimize data workflows for efficient data processing and analysis.",
+      "Efficiently extract, transform, and load data with Airflow, Databricks, Azure Data Factory, BigQuery, Google Dataproc, Snowflake and Azure Synapse. Explore the power of Data Lakehouse technologies like Delta Lake, BigQuery's BigLake and Dataplex for advanced data storage and processing. Enhance your analytics with Snowplow's capabilities for event data collection and processing.",
       logos: [
         {
           name: "Airflow",
@@ -124,10 +95,34 @@ const Stack = () => {
           image: AirflowLogo,
         },
         {
+          name: "Spark",
+          description:
+            "Apache Spark is an open-source distributed computing system used for big data processing and analytics.",
+          image: SparkLogo,
+        },
+        {
           name: "Databricks",
           description:
             "Databricks offers a unified analytics platform designed to help teams collaborate on big data and machine learning projects.",
           image: DatabricksLogo,
+        },
+        {
+          name: "BigQuery",
+          description:
+            "Google BigQuery is a fully-managed, serverless data warehouse that enables super-fast SQL queries using the processing power of Google's infrastructure.",
+          image: BigqueryLogo,
+        },
+        {
+          name: "Dataproc",
+          description:
+            "Google Dataproc is a fast, easy-to-use, fully managed cloud service for running Apache Spark and Apache Hadoop clusters.",
+          image: DataprocLogo,
+        },
+        {
+          name: "Dataplex",
+          description:
+            "Google Dataplex: Unify and govern your data effortlessly. Benefit from advanced data catalog and governance features for seamless data management and data quality.",
+          image: DataplexLogo,
         },
         {
           name: "Azure Data Factory",
@@ -135,13 +130,6 @@ const Stack = () => {
             "Azure Data Factory is a cloud-based data integration service that enables you to create, schedule, and manage data pipelines.",
           image: AdfLogo,
         },
-      ],
-    },
-    {
-      name: "Data Lakehouse",
-      description:
-        "We leverage advanced data lakehouse technologies including Delta Lake, Snowflake, and Azure Synapse to create unified and efficient data storage and processing solutions for our clients.",
-      logos: [
         {
           name: "Delta Lake",
           description:
@@ -160,19 +148,6 @@ const Stack = () => {
             "Azure Synapse Analytics is an analytics service that brings together big data and data warehousing.",
           image: AzuresynapseLogo,
         },
-      ],
-    },
-    {
-      name: "Databases",
-      description:
-        "Our database solutions encompass a range of powerful technologies including MongoDB and Snowplow, enabling us to handle and process large amounts of data effectively.",
-      logos: [
-        {
-          name: "MongoDB",
-          description:
-            "MongoDB is a NoSQL database program used to handle large amounts of data.",
-          image: MongoLogo,
-        },
         {
           name: "Snowplow",
           description:
@@ -184,14 +159,8 @@ const Stack = () => {
     {
       name: "Machine Learning",
       description:
-        "We harness the capabilities of cutting-edge machine learning tools including Spark, PyTorch, TensorFlow, Amazon SageMaker, MLflow, Azure Machine Learning, and Vertex AI to build intelligent and data-driven solutions.",
+        "We harness the capabilities of cutting-edge machine learning tools including PyTorch, TensorFlow, Amazon SageMaker, MLflow, Azure Machine Learning, and Vertex AI to build intelligent and data-driven solutions.",
       logos: [
-        {
-          name: "Spark",
-          description:
-            "Apache Spark is an open-source distributed computing system used for big data processing and analytics.",
-          image: SparkLogo,
-        },
         {
           name: "PyTorch",
           description:
@@ -227,6 +196,37 @@ const Stack = () => {
           description:
             "Google Cloud Vertex AI accelerates the deployment and maintenance of machine learning models at scale.",
           image: VertexaiLogo,
+        },
+      ],
+    },
+    {
+      name: "Data Visualization",
+      description:
+        "We utilize powerful data visualization tools such as Apache Superset, Looker, Domo, and PowerBI to transform complex data into actionable insights for our clients.",
+      logos: [
+        {
+          name: "Superset",
+          description:
+            "Apache Superset is a modern, open-source data exploration and visualization platform.",
+          image: ApachesupersetLogo,
+        },
+        {
+          name: "Looker",
+          description:
+            "Looker is a business intelligence and data visualization tool that helps companies make better business decisions.",
+          image: LookerLogo,
+        },
+        {
+          name: "Domo",
+          description:
+            "Domo is a cloud-based business intelligence and data visualization platform that empowers organizations to make informed decisions.",
+          image: DomoLogo,
+        },
+        {
+          name: "PowerBI",
+          description:
+            "Microsoft Power BI is a business analytics service that provides interactive visualizations and business intelligence capabilities.",
+          image: PowerbiLogo,
         },
       ],
     },
